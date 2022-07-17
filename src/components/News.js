@@ -9,11 +9,13 @@ export default class News extends Component {
     country: "in",
     pageSize: 9,
     category: "sports",
+    apikey: "af1bf5009fa14d988b5aa049bb3a7606",
   };
   static propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
     category: PropTypes.string,
+    apikey: PropTypes.string,
   };
 
   capitalize = (string) => {
@@ -31,7 +33,7 @@ export default class News extends Component {
   }
 
   async updateNews() {
-    let apiurl = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=af1bf5009fa14d988b5aa049bb3a7606&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    let apiurl = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(apiurl);
     let parsedData = await data.json();
@@ -79,7 +81,7 @@ export default class News extends Component {
       <>
         <div className="container my-4 ">
           <h2 className="text-center" style={{ margin: "35px 0px" }}>
-            News on {this.capitalize(this.props.category)} Category
+            News on {this.capitalize(this.props.category)}
           </h2>
           {this.state.loading && <Spinner />}
           <br />

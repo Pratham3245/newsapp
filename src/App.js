@@ -10,6 +10,7 @@ export default class App extends Component {
     super();
     this.state = {
       pageSize: 12,
+      apikey: "af1bf5009fa14d988b5aa049bb3a7606",
     };
   }
   render() {
@@ -27,6 +28,7 @@ export default class App extends Component {
                     pageSize={this.state.pageSize}
                     country="us"
                     category="technology"
+                    apikey={this.state.apikey}
                     key="home"
                   />
                 }
@@ -38,6 +40,7 @@ export default class App extends Component {
                   <News
                     pageSize={this.state.pageSize}
                     country="in"
+                    apikey={this.state.apikey}
                     category="sports"
                     key="sports"
                   />
@@ -50,6 +53,7 @@ export default class App extends Component {
                   <News
                     pageSize={this.state.pageSize}
                     country="in"
+                    apikey={this.state.apikey}
                     category="general"
                     key="general"
                   />
@@ -62,6 +66,7 @@ export default class App extends Component {
                   <News
                     pageSize={this.state.pageSize}
                     country="in"
+                    apikey={this.state.apikey}
                     category="technology"
                     key="technology"
                   />
@@ -74,6 +79,7 @@ export default class App extends Component {
                   <News
                     pageSize={this.state.pageSize}
                     country="in"
+                    apikey={this.state.apikey}
                     category="science"
                     key="science"
                   />
@@ -86,6 +92,7 @@ export default class App extends Component {
                   <News
                     pageSize={this.state.pageSize}
                     country="in"
+                    apikey={this.state.apikey}
                     category="health"
                     key="health"
                   />
@@ -98,6 +105,7 @@ export default class App extends Component {
                   <News
                     pageSize={this.state.pageSize}
                     country="in"
+                    apikey={this.state.apikey}
                     category="entertainment"
                     key="entertainment"
                   />
@@ -110,6 +118,7 @@ export default class App extends Component {
                   <News
                     pageSize={this.state.pageSize}
                     country="in"
+                    apikey={this.state.apikey}
                     category="business"
                     key="business"
                   />
